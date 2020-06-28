@@ -1,5 +1,5 @@
 {
-  "name": "particle-canvas",
+  "name": "particle-canvas-gustavo",
   "version": "1.0.0",
   "description": "build a lib tu use particels in canvas",
   "main": "lib/index.js",

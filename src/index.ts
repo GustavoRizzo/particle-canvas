@@ -8,13 +8,13 @@ export default class Paticle {
     public vSpeed : any;    
     public strColor: string;
     public radius : number;
-    public absSpeed : number;
+    //public absSpeed : number;
 
     constructor(context : CanvasRenderingContext2D) {
         this.ctx = context;
 
         //const
-        this.absSpeed = 1;
+        //this.absSpeed = 1;
         this.radius = 1;
         this.strColor = '#FFF';
 
@@ -28,8 +28,8 @@ export default class Paticle {
         };
 
         this.vSpeed = {
-            x: (Math.cos(this.directionAngle) * this.absSpeed),
-            y: (Math.sin(this.directionAngle) * this.absSpeed)
+            x: (Math.cos(this.directionAngle) * 1), //this.absSpeed),
+            y: (Math.sin(this.directionAngle) * 1) //this.absSpeed)
         }        
     }
 

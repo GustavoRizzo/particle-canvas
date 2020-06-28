@@ -1,4 +1,4 @@
-export default class Paticle {
+export default class Particle {
 
     private ctx : CanvasRenderingContext2D;
     public drawCtxWidthLimit : number;
@@ -56,6 +56,23 @@ export default class Paticle {
 
         if ( this.vPosition.y < 0 || this.vPosition.y > this.drawCtxHeightLimit ) {
             this.vSpeed.y *= -1;
+        }
+    }
+
+    static linkParticles(particle: Particle , othersParticle  : Array<Particle> , contexto: CanvasRenderingContext2D) {
+        const distMin = 100;
+        for (const p of othersParticle) {
+            const distancia = Math.hypot( (p.vPosition.x - particle.vPosition.x) , (p.vPosition.y - particle.vPosition.y) );
+            if (distancia< distMin)
+            {
+                const opacity = 1 - distancia/distMin;
+                contexto.lineWidth = 1;
+                contexto.strokeStyle = `rgba(255,255,255,${opacity})`;
+                contexto.beginPath();
+                contexto.moveTo(particle.vPosition.x, particle.vPosition.y);
+                contexto.lineTo(p.vPosition.x, p.vPosition.y);
+                contexto.stroke();
+            }
         }
     }
 

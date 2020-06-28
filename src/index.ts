@@ -3,12 +3,12 @@ export default class Paticle {
     private ctx : CanvasRenderingContext2D;
     public drawCtxWidthLimit : number;
     public drawCtxHeightLimit : number;
-    public vPosition : any;
-    public absSpeed : number;
+    public vPosition : any;    
     public directionAngle : number = Math.floor(Math.random() * 360);
-    public vSpeed : any;
-    public radius :number;
+    public vSpeed : any;    
     public strColor: string;
+    public radius : number;
+    public absSpeed : number;
 
     constructor(context : CanvasRenderingContext2D) {
         this.ctx = context;

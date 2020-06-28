@@ -1,0 +1,23 @@
+{
+  "name": "particle-canvas",
+  "version": "1.0.0",
+  "description": "build a lib tu use particels in canvas",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoRizzo/particle-canvas.git"
+  },
+  "author": "Gustavo Rizzo Albuquerque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustavoRizzo/particle-canvas/issues"
+  },
+  "homepage": "https://github.com/GustavoRizzo/particle-canvas#readme",
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
+}

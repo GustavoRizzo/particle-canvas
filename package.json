@@ -1,6 +1,6 @@
 {
   "name": "particle-canvas-gustavorizzo",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "build a lib tu use particels in canvas",
   "main": "lib/index.js",
   "types": "lib",

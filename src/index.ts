@@ -4,14 +4,20 @@ export default class Paticle {
     public drawCtxWidthLimit : number;
     public drawCtxHeightLimit : number;
     public vPosition : any;
-    public absSpeed : number = 1;
+    public absSpeed : number;
     public directionAngle : number = Math.floor(Math.random() * 360);
     public vSpeed : any;
-    public radius :number = 1;
-    public strColor: string = '#FFF'
+    public radius :number;
+    public strColor: string;
 
     constructor(context : CanvasRenderingContext2D) {
         this.ctx = context;
+
+        //const
+        this.absSpeed = 1;
+        this.radius = 1;
+        this.strColor = '#FFF';
+
 
         this.drawCtxWidthLimit = this.ctx.canvas.clientWidth;
         this.drawCtxHeightLimit = this.ctx.canvas.clientHeight;
